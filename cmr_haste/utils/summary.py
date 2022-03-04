@@ -7,7 +7,7 @@ import datetime
 import os
 from collections import OrderedDict
 
-from cmr_seg.utils.misc import ensure_dir, ensure_dirs
+from cmr_haste.utils.misc import ensure_dir, ensure_dirs
 
 try:
     import wandb
