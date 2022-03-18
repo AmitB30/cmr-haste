@@ -90,7 +90,8 @@ class CheckpointSaver:
                 best_save_path = os.path.join(self.checkpoint_dir, 'model_best' + self.extension)
                 if os.path.exists(best_save_path):
                     os.unlink(best_save_path)
-                os.link(last_save_path, best_save_path)
+                #os.link(last_save_path, best_save_path)
+                last_save_path = best_save_path
 
         return (None, None) if self.best_metric is None else (self.best_metric, self.best_epoch)
 
