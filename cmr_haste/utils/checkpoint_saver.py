@@ -63,7 +63,8 @@ class CheckpointSaver:
         last_save_path = os.path.join(self.checkpoint_dir, 'last' + self.extension)
         self._save(tmp_save_path, epoch, metric)
         if os.path.exists(last_save_path):
-            os.unlink(last_save_path)  # required for Windows support.
+            #os.unlink(last_save_path)  # required for Windows support.
+            os.remove(last_save_path)
         os.rename(tmp_save_path, last_save_path)
         worst_file = self.checkpoint_files[-1] if self.checkpoint_files else None
         if (len(self.checkpoint_files) < self.max_history
@@ -89,7 +90,8 @@ class CheckpointSaver:
                 self.best_metric = metric
                 best_save_path = os.path.join(self.checkpoint_dir, 'model_best' + self.extension)
                 if os.path.exists(best_save_path):
-                    os.unlink(best_save_path)
+                    #os.unlink(best_save_path)
+                    os.remove(best_Save_path)
                 #os.link(last_save_path, best_save_path)
                 last_save_path = best_save_path
 
