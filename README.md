@@ -1,2 +1,1 @@
-# cmr-haste
-Segmentation of CMR HASTE images using deep learning.
+# Automated Analysis of ECGI-CMR Iages Using Deep Learning
