@@ -1,1 +1,2 @@
-# Automated Analysis of ECGI-CMR Iages Using Deep Learning
+# cmr-haste
+Automated Analysis of ECGI-CMR Iages Using Deep Learning
